@@ -72,7 +72,7 @@ with open(csvpath, encoding='utf') as csvfile:
 output_path = os.path.join("analysis", "results.txt")
 
 # list of lines to write to report
-lines = ["--------------------------", "Financial Analysis Report", "--------------------------", f"Total Months: {total_months}", f"Total: {net_profit}", f"Average Change: {average_change}", f"Greatest Increase in Profits: {greatest_inc_date} ({greatest_inc})", f"Greatest Decrease in Profits: {greatest_dec_date} ({greatest_dec})", "--------------------------", "End of Report", "--------------------------"]
+lines = ["--------------------------", "Financial Analysis Report", "--------------------------", f"Total Months: {total_months}", f"Total: ${net_profit}", f"Average Change: ${average_change}", f"Greatest Increase in Profits: {greatest_inc_date} (${greatest_inc})", f"Greatest Decrease in Profits: {greatest_dec_date} (${greatest_dec})", "--------------------------", "End of Report", "--------------------------"]
 
 # open the file using "write" mode
 with open(output_path, 'w') as results:
