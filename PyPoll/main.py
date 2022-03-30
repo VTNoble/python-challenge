@@ -1,6 +1,5 @@
 # import csv and os
 import csv
-from importlib.machinery import WindowsRegistryFinder
 import os
 
 # set up file path to access csv file
@@ -46,10 +45,8 @@ with open(csvpath, encoding='utf') as csvfile:
     #if total_votes == sum(vote_breakdown):
         #print(True)
 
-    # list comprehension to calculate and generate list of percentages
-    vote_percentages = [(votes / total_votes * 100) for votes in vote_breakdown]
-    # round percentages to 3 digits
-    vote_percentages = [round(percentage,3) for percentage in vote_percentages]
+    # list comprehension to calculate and generate list of percentages and round to 3 digits
+    vote_percentages = [round(votes / total_votes * 100,3) for votes in vote_breakdown]
 
     # find winner or determine if there is a tie
     winner = ""
